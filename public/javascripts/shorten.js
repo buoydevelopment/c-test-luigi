@@ -7,7 +7,7 @@ $('.btn-shorten').on('click', function(){
     cache: false,
     data: {url: $('#url-field').val(), short_url: $('#short-code-field').val()},
     success: function(data){
-        var resultHTML = '<a class="result" href="' + data.short_url + '">' + data.short_url + '</a>';
+        var resultHTML = '<a class="result" href="' + data.short_url + '" target="_blank">' + data.short_url + '</a>';
         $('#link').html(resultHTML);
         $('#link').hide().fadeIn('slow');
         $('#short-code-field').val('');
